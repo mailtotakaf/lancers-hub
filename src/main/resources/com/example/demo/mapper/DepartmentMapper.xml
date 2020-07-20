@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.DepartmentMapper">
+
+<!-- 全件検索 -->
+<select id="selectAll"  resultType="Department">
+    SELECT
+        department_id AS 'dptId',
+        department_name AS 'dptName'
+    FROM
+        m_department
+</select>
+
+<select id="selectModalEmp"  resultType="Emp">
+    SELECT
+    	emp_id AS 'empId'
+        department_id AS 'dptId',
+        emp_name AS 'empName'
+    FROM
+        m_emp
+</select>
+
+</mapper>
